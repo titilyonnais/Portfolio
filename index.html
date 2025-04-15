@@ -6,28 +6,24 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Mon portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
-
-    <!-- SOCIAL NETWORK-->
-    <div>
-        <a href=""><img alt="" src=""></a>
-        <a href=""><img alt="" src=""></a>
+    <div class="headerContainer">
+        <div class="socials">
+            <a href="#"><img alt="GitHub" src="assets/logoGitHub.png"></a>
+            <a href="#"><img alt="LinkedIn" src="assets/logoLinkedin.png"></a>
+        </div>
+        <nav class="navbar">
+            <a href="#">Accueil.</a>
+            <a href="#">Projets.</a>
+            <a href="#">À propos.</a>
+            <a href="#">Contact.</a>
+        </nav>
     </div>
-
-    <!-- NAVBAR -->
-    <nav>
-        <ul>
-            <li><a href="">ACCUEIL</a></li>
-            <li><a href="">PROJETS</a></li>
-            <li><a href="">À PROPOS</a></li>
-            <li><a href="">CONTACT</a></li>
-        </ul>
-    </nav>
 </header>
 
 <!-- MAIN -->
@@ -35,6 +31,8 @@
 
     <!-- HERO SECTION -->
     <section>
+
+        <!-- BACKGROUND IMAGE -->
         <img alt="" src="">
         <div>
             <h1>THIBAULT MORRETTON</h1>
@@ -47,6 +45,8 @@
     <!-- PROJECTS SECTION -->
     <section>
         <h2>PROJETS</h2>
+
+        <!-- PROJECTS -->
         <div>
             <div>
                 <h3>LOREM IPSUM</h3>
@@ -137,6 +137,7 @@
                 <p>LOREM</p>
             </div>
         </div>
+    </section>
 </main>
 
 <!-- FOOTER -->
@@ -144,5 +145,17 @@
     <div>
         <p>© 2025 THIBAULT MORRETTON - TOUS DROITS RÉSERVÉS</p>
     </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+header {
+    width: 100%;
+    background: linear-gradient(to right, #c2a57a, #e8c9a1, #a2907c);
+    border-bottom: 1px solid #000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Pour que les enfants prennent toute la hauteur du header */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 80px; /* Ajuste selon la hauteur que tu veux pour ton header */
+    position: relative;
+}
+
+/* Bloc des icônes */
+.socials {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-right: 20px;
+    border-right: 1px solid #000; /* Bordure verticale */
+    height: 100%;
+}
+
+/* Icônes sociales */
+.socials img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Navbar centrée */
+.navbar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 40px;
+    background: red;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
