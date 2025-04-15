@@ -73,6 +73,7 @@ header {
     position: fixed;
     width: 100%;
     border-bottom: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.1);
 }
 
 header.scrolled {
@@ -82,7 +83,7 @@ header.scrolled {
 .headerContainer {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -103,7 +104,11 @@ header.scrolled {
     width: 32px;
     height: 32px;
     filter: invert(1);
-    transition: filter 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.socials img:hover {
+    transform: scale(1.3);
 }
 
 header.scrolled .socials img {
@@ -144,18 +149,22 @@ header.scrolled .navbar a:hover {
 /* HERO SECTION */
 
 .hero {
+    border-bottom: 1px solid #fff;
+}
+
+.divHero {
     height: 100vh;
     padding-top: 80px;
     display: flex;
     align-items: center;
 }
 
-.hero h1 {
+.divHero h1 {
     font-size: 50px;
     margin-bottom: 20px;
 }
 
-.hero img {
+.divHero img {
     width: 400px;
     height: 400px;
     object-fit: cover;
@@ -167,10 +176,30 @@ header.scrolled .navbar a:hover {
     width: 50%;
     display: flex;
     justify-content: center;
+    border-left: 1px solid #fff;
 }
 
 .divText {
     width: 50%;
+    padding-left: 45px;
+}
+
+.divGhostL {
+    height: 100%;
+    width: 50%;
+    top: 0;
+    background: rgba(255, 0, 0, 0.3);
+    position: absolute;
+    border-right: 1px solid #fff;
+}
+
+.divGhostR {
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
+    background: rgba(0, 255, 0, 0.3);
+    position: absolute;
 }
 
 
