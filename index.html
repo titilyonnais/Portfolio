@@ -10,21 +10,22 @@
     <link href="assets/logo.ico" rel="icon" type="image/x-icon">
 </head>
 <body>
+<!-- WEBSITE WALLPAPER -->
 
 <!-- HEADER -->
-<header>
-    <div class="headerContainer">
-        <div class="socials">
+<header class="fixed w100">
+    <div class="socialsContainer flex spaceBetween alignCenter relative">
+        <div class="socials flex alignCenter">
             <a href="#"><img alt="GitHub" src="assets/logoGitHub.png"></a>
             <a href="#"><img alt="LinkedIn" src="assets/logoLinkedin.png"></a>
         </div>
-        <nav class="navbar">
-            <a href="#">Accueil.</a>
-            <a href="#">Projets.</a>
-            <a href="#">À propos.</a>
-            <a href="#">Contact.</a>
-        </nav>
     </div>
+    <nav class="navbar flex absolute">
+        <a href="#">Accueil.</a>
+        <a href="#">Projets.</a>
+        <a href="#">À propos.</a>
+        <a href="#">Contact.</a>
+    </nav>
 </header>
 
 <!-- MAIN -->
@@ -32,12 +33,12 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <div class="divHero container">
+        <div class="divHero container flex alignCenter">
             <!-- BACKGROUND IMAGE -->
-            <div class="divImg">
+            <div class="divImg flex alignCenter justifyCenter w50">
                 <img alt="Ma photo" src="assets/moi.jpg">
             </div>
-            <div class="divText">
+            <div class="divText w50">
                 <h1>THIBAULT MORRETTON</h1>
                 <p>Futur développeur front-end, je me forme aux technologies web modernes pour créer des interfaces
                     claires,
@@ -45,66 +46,23 @@
                     j’apprends.</p>
             </div>
         </div>
-        <div class="divGhostL"></div>
-        <div class="divGhostR"></div>
+            <div class="divGhostL absolute w50"></div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section>
+    <!-- gridBoxS SECTION -->
+    <section class="projects">
         <h2>PROJETS</h2>
 
-        <!-- PROJECTS -->
-        <div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
-            <div>
-                <h3>LOREM IPSUM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, dolore facere ipsam quasi rerum
-                    ut.</p>
-            </div>
+        <div class="gridContainer">
+            <div class="gridBox square red"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox tall yellow"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox green"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox tall yellow"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox wide blue"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox green"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox square red"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox wide blue"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
+            <div class="gridBox wide blue"><h3>LOREM IPSUM</h3><p>Lorem ipsum dolor sit amet.</p></div>
         </div>
     </section>
 
