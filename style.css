@@ -21,6 +21,28 @@ body {
     color: white;
 }
 
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* //////////////////////// */
+/* FLEXBOX */
+/* //////////////////////// */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
 /* //////////////////////// */
 /* FONTS */
 /* //////////////////////// */
@@ -118,5 +140,39 @@ header.scrolled .navbar a {
 header.scrolled .navbar a:hover {
     color: #fff;
 }
+
+/* HERO SECTION */
+
+.hero {
+    height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+}
+
+.divImg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.divText {
+    width: 50%;
+}
+
+
 
 
