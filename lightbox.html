@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link href="lightbox.css" rel="stylesheet">
+</head>
+<body>
+<!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+        <img class="hover-shadow" onclick="openModal();currentSlide(1)" src="assets/html5.jpg">
+    </div>
+    <div class="column">
+        <img class="hover-shadow" onclick="openModal();currentSlide(2)" src="assets/html5.jpg">
+    </div>
+    <div class="column">
+        <img class="hover-shadow" onclick="openModal();currentSlide(3)" src="assets/html5.jpg">
+    </div>
+    <div class="column">
+        <img class="hover-shadow" onclick="openModal();currentSlide(4)" src="assets/html5.jpg">
+    </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div class="modal" id="myModal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="assets/interno.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="assets/interno.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="assets/interno.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="assets/interno.png" style="width:100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="column">
+            <img alt="Nature" class="demo" onclick="currentSlide(1)" src="assets/interno.png">
+        </div>
+
+        <div class="column">
+            <img alt="Snow" class="demo" onclick="currentSlide(2)" src="assets/interno.png">
+        </div>
+
+        <div class="column">
+            <img alt="Mountains" class="demo" onclick="currentSlide(3)" src="assets/interno.png">
+        </div>
+
+        <div class="column">
+            <img alt="Lights" class="demo" onclick="currentSlide(4)" src="assets/interno.png">
+        </div>
+    </div>
+</div>
+
+<script>
+    // Open the Modal
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>
+</body>
+</html>
