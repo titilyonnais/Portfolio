@@ -66,7 +66,7 @@ main {
     z-index: 1000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .overlay.visible {
@@ -78,35 +78,9 @@ main {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80vw;
-    height: 80vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 1001;
-    transform: translate(-50%, -50%) scale(0.95);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    overflow-y: auto; /* Active le scroll vertical si nécessaire */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.vignette.visible {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-
-.vignette {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 80vw; /* Ajuste la taille de la vignette */
-    height: 80vh; /* Ajuste la hauteur de la vignette */
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vh;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -114,18 +88,30 @@ main {
     opacity: 0;
     pointer-events: none;
     z-index: 1000;
-    transform: scale(0.95);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    overflow-y: auto; /* Active le scroll vertical si nécessaire */
-    padding: 20px; /* Ajoute un peu d'espace à l'intérieur de la vignette */
-    border-radius: 10px; /* Ajoute un léger arrondi aux coins */
+    transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+    overflow-y: auto;
+    border-radius: 50px;
+    scrollbar-width: none;
+    overflow-y: scroll;
 }
 
+.vignette p {
+    padding-top: 300px;
+}
+
+.vignette::-webkit-scrollbar {
+    display: none;
+}
+
+.vignette.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 .close-btn {
     position: absolute;
-    top: 20px; /* Ajusté la position */
-    right: 20px; /* Ajusté la position */
+    top: 20px;
+    right: 30px;
     font-size: 30px;
     cursor: pointer;
     color: #000;
