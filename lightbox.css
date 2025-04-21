@@ -1,41 +1,48 @@
-.row > .column {
-    padding: 0 8px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Create four equal columns that floats next to eachother */
-.column {
-    float: left;
-    width: 25%;
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /* The Modal (background) */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: white;
     margin: auto;
     padding: 0;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1500px;
+    border-radius: 10px;
+}
+
+.mySlides {
+    margin-top: 10px;
+}
+
+.mySlides img {
+    border-radius: 10px;
+    margin: 20px;
+   display: inline-block;
+}
+
+.modal-content p {
+    color: #000;
+    font-size: 20px;
+    padding: 10px 20px;
 }
 
 /* The Close Button */
@@ -53,11 +60,6 @@
     color: #999;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-    display: none;
 }
 
 /* Next & previous buttons */
@@ -97,14 +99,6 @@
     padding: 8px 12px;
     position: absolute;
     top: 0;
-}
-
-/* Caption text */
-.caption-container {
-    text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
 }
 
 img.demo {
